@@ -1,0 +1,21 @@
+<perch:repeater id="images" label="Images" max="10">
+<perch:before>
+ <div class="carousel arrows" data-transition="fade">
+</perch:before>
+	<figure>
+	  <img src="<perch:content id="image" type="image" label="Image" width="800" />" 
+	       alt="<perch:content id="alt" label="Image description" type="text" required="true" />" />
+	       
+	            <!--* alternative sizes of the same image upload *-->
+				<perch:content id="image" type="image" label="Image" width="500" suppress="true" />
+				<perch:content id="image" type="image" label="Image" width="300" suppress="true" />
+		  <figcaption>
+	    <p class="c-carousel__copy"><perch:content id="title" label="Title" type="smarttext" /></p>
+	  </figcaption>
+	</figure> 
+<perch:after>
+ </div>
+</perch:after>
+</perch:repeater>
+ 
+  
